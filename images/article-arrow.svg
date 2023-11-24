@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" width="34.09" height="12.59" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.09 12.59">
+  <defs>
+    <linearGradient id="d" data-name="未命名漸層 51" x1="0" y1="6.3" x2="34.09" y2="6.3" gradientTransform="matrix(1, 0, 0, 1, 0, 0)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#83b9e4"/>
+      <stop offset=".03" stop-color="#76b6dd"/>
+      <stop offset=".11" stop-color="#52b0cb"/>
+      <stop offset=".2" stop-color="#34abbc"/>
+      <stop offset=".29" stop-color="#1da7b0"/>
+      <stop offset=".39" stop-color="#0ca4a8"/>
+      <stop offset=".5" stop-color="#03a2a3"/>
+      <stop offset=".64" stop-color="#00a2a2"/>
+      <stop offset="1" stop-color="#006e5a"/>
+    </linearGradient>
+  </defs>
+  <g id="c" data-name="圖層 1">
+    <polyline points="0 11.59 31.67 11.59 20.79 .71" style="fill: none; stroke: url(#d); stroke-miterlimit: 10; stroke-width: 2px;"/>
+  </g>
+</svg>

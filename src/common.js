@@ -53,10 +53,44 @@ $(window).on("resize", function () {
 	}
 }).trigger("resize");
 
-var winWidth = window.innerWidth;
-if (winWidth >= 1200) {
-	luxy.init();
-}
+$("[data-r]").each(function (i, el) {
+	if (device == 'mobile' && $(el).data("mobile-r") != undefined) {
+		var _p = $(el).data("mobile-r")
+	} else {
+		var _p = $(el).data("r")
+	}
+	var _st_default = {
+		trigger: el,
+		start: "top 80%",
+		end: "bottom 0%",
+		toggleActions: "play none play none",
+		// markers: true,
+	}
+	var _st = Object.assign(_st_default, _p.scrollTrigger)
+
+	var _t = $(el).offset().top
+	var _hook = $(window).height() * _st.start.replace(/[^0-9]/g, '') / 100
+
+	if (_t <= _hook) {
+		_p.delay = (_p.delay != undefined) ? _p.delay += 2 : 2
+	}
+
+	delete _p.scrollTrigger
+
+	var _setting = {
+		scrollTrigger: _st,
+		duration: 1.4,
+		// opacity: 0,
+		ease: "power2.out",
+	}
+	if (_p != '' && "stagger" in _p) {
+		var $el = $(el).children()
+	} else {
+		var $el = el
+	}
+	var _obj = Object.assign(_setting, _p);
+	gsap.from($el, _obj);
+})
 
 
 $("#preload").delay(1000).fadeOut(600, function () {
