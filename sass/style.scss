@@ -42,6 +42,9 @@ body {
     main {
         position: relative;
         padding-bottom: 300px;
+        @include breakpoint(medium down) {
+            padding-bottom: 0px;
+        }
     }
 
 
@@ -49,14 +52,27 @@ body {
         padding-top: 120px;
         margin-bottom: 235px;
 
+        @include breakpoint(medium down) {
+            padding-top: 20px;
+            margin-bottom: 70px;
+        }
+
         .title-area {
             text-align: center;
             margin-bottom: 78px;
+
+            @include breakpoint(medium down) {
+                margin-bottom: 25px;
+            }
         }
 
         .banner-area {
             text-align: center;
             padding: 0 87px;
+
+            @include breakpoint(medium down) {
+                padding: 0 45px;
+            }
         }
     }
 
@@ -67,8 +83,27 @@ body {
 
         margin: 0 auto 385px;
 
+        @include breakpoint(medium down) {
+            text-align: right;
+            padding-right: 45px;
+            align-items: initial;
+            margin: 0 auto 115px;
+        }
+
         .logo {
             margin-right: 148px;
+
+            @include breakpoint(medium down) {
+                margin-right: -100px;
+                margin-left: -10px;
+            }
+        }
+
+        .text-area {
+            @include breakpoint(medium down) {
+
+                margin-top: 95px;
+            }
         }
 
         .title {
@@ -85,8 +120,9 @@ body {
             }
 
             @include breakpoint(medium down) {
-                font-size: 50px;
-                margin-bottom: 33px;
+                // text-align: left;
+                font-size: 38px;
+                margin-bottom: 85px;
             }
         }
 
@@ -102,7 +138,7 @@ body {
 
             @include breakpoint(medium down) {
                 font-size: 15px;
-                margin-bottom: 43px;
+                margin-bottom: 35px;
             }
         }
 
@@ -113,12 +149,22 @@ body {
             letter-spacing: 2px;
             line-height: 1.9;
             text-align: justify;
+
+            @include breakpoint(medium down) {
+                font-size: 12px;
+                // margin-bottom: 35px;
+            }
         }
     }
 
     .info-container {
         max-width: 1150px;
         margin: 0 auto 365px;
+
+        @include breakpoint(medium down) {
+            padding: 0 45px;
+            margin: 0 auto 110px;
+        }
 
         .title {
             font-family: $title-family;
@@ -128,6 +174,11 @@ body {
             font-size: 52px;
             letter-spacing: 8px;
             text-align: center;
+
+            @include breakpoint(medium down) {
+                font-size: 24px;
+                margin-bottom: 35px;
+            }
         }
 
         .content {
@@ -136,11 +187,19 @@ body {
             letter-spacing: 2px;
             line-height: 1.9;
             text-align: justify;
+
+            @include breakpoint(medium down) {
+                font-size: 12px;
+            }
         }
     }
 
     .application-container {
         margin-bottom: 350px;
+
+        @include breakpoint(medium down) {
+            margin-bottom: 105px;
+        }
 
         .title {
             font-family: $title-family;
@@ -150,26 +209,59 @@ body {
             font-size: 52px;
             letter-spacing: 4px;
             text-align: center;
+
+            @include breakpoint(medium down) {
+                font-size: 24px;
+                margin-bottom: 65px;
+            }
         }
 
         .applicationList {
             max-width: 1370px;
             margin: 0 auto;
 
+            @include breakpoint(medium down) {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            li {
+                @include breakpoint(medium down) {
+                    flex-direction: column;
+                    align-items: center;
+                    margin-bottom: 40px;
+                }
+            }
+
             .icon {
                 margin-right: 45px;
+
+                @include breakpoint(medium down) {
+                    margin-right: 0px;
+                    margin-bottom: 15px;
+                }
             }
 
             .name {
                 font-size: 30px;
                 color: #808080;
                 letter-spacing: 7px;
+
+                @include breakpoint(medium down) {
+                    font-size: 15px;
+                    letter-spacing: 5px;
+                }
             }
         }
     }
 
     .more-article {
+        position: relative;
         margin-bottom: 245px;
+
+        @include breakpoint(medium down) {
+            margin-bottom: 105px;
+        }
 
         .top-title {
             font-family: $title-family;
@@ -179,18 +271,34 @@ body {
             font-size: 52px;
             letter-spacing: 4px;
             text-align: center;
+
+            @include breakpoint(medium down) {
+                font-size: 24px;
+                margin-bottom: 60px;
+            }
         }
 
         .articleSlider {
             position: relative;
             max-width: 1700px;
             margin: 0 auto;
+
+            @include breakpoint(medium down) {
+                margin: 0 80px;
+                // border-right: none;
+            }
         }
 
         .swiper-slide {
             padding: 0 130px;
             border-right: 1px solid #191f61;
+
             // font-family: $title-family;
+            @include breakpoint(medium down) {
+                // padding: 0 80px;
+                padding: 0;
+                border-right: none;
+            }
 
             @for $i from 1 to 800 {
                 @if $i % 3==0 {
@@ -206,6 +314,13 @@ body {
                 margin-bottom: 40px;
                 overflow: hidden;
 
+                @include breakpoint(medium down) {
+                    width: 100%;
+                    height: auto;
+                    aspect-ratio: 1/1;
+                    margin-bottom: 25px;
+                }
+
                 img {
                     width: 100%;
                     height: 100%;
@@ -219,6 +334,11 @@ body {
                 font-weight: 300;
                 letter-spacing: 2px;
                 margin-bottom: 40px;
+
+                @include breakpoint(medium down) {
+                    font-size: 12px;
+                    margin-bottom: 28px;
+                }
             }
 
             .title {
@@ -228,6 +348,11 @@ body {
                 line-height: 1.4;
                 text-align: justify;
                 margin-bottom: 50px;
+
+                @include breakpoint(medium down) {
+                    font-size: 16px;
+                    margin-bottom: 30px;
+                }
             }
 
             .more {
@@ -236,8 +361,16 @@ body {
                 letter-spacing: 2px;
                 text-align: right;
 
+                @include breakpoint(medium down) {
+                    font-size: 12px;
+                }
+
                 .arrow {
                     margin-left: 5px;
+
+                    @include breakpoint(medium down) {
+                        zoom: 0.8;
+                    }
                 }
             }
 
@@ -250,14 +383,35 @@ body {
             }
         }
 
+        .swiper-button-next,
+        .swiper-button-prev {
+            &::after {
+                display: none;
+            }
+        }
+
+        .swiper-button-next {
+            right: 25px;
+        }
+
+        .swiper-button-prev {
+            left: 25px;
+        }
     }
 
     .service-container {
         // margin-top: -248px;
         margin-bottom: 255px;
-
+        position: relative;
+        @include breakpoint(medium down) {
+            margin-bottom: 105px;
+        }
         .title-area {
             margin-bottom: 120px;
+
+            @include breakpoint(medium down) {
+                margin-bottom: 60px;
+            }
         }
 
         .title {
@@ -269,6 +423,10 @@ body {
             font-weight: 500;
             text-align: center;
 
+            @include breakpoint(medium down) {
+                font-size: 30px;
+                margin-bottom: 28px;
+            }
 
             // @include breakpoint(large down) {
             //     font-size: 72px;
@@ -290,10 +448,10 @@ body {
             //     font-size: 18px;
             // }
 
-            // @include breakpoint(medium down) {
-            //     font-size: 15px;
-            //     margin-bottom: 43px;
-            // }
+            @include breakpoint(medium down) {
+                font-size: 15px;
+                // margin-bottom: 43px;
+            }
         }
 
         .service-area {
@@ -302,6 +460,10 @@ body {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-gap: 0 94px;
+
+            @include breakpoint(medium down) {
+                display: flex;
+            }
 
             // @include breakpoint(large down) {
             //     max-width: 960px;
@@ -315,16 +477,20 @@ body {
 
             li {
                 max-width: 664px;
-
-
-
                 &:nth-child(even) {
                     margin-top: 225px;
+                    @include breakpoint(medium down) {
+                        margin-top: 0;
+                    }
                 }
 
                 .pic-area {
                     overflow: hidden;
                     margin-bottom: 30px;
+
+                    @include breakpoint(medium down) {
+                        margin-bottom: 20px;
+                    }
 
                     img {
                         width: 100%;
@@ -341,6 +507,9 @@ body {
                     // padding-left: 48px;
                     position: relative;
 
+                    @include breakpoint(medium down) {
+                        display: block;
+                    }
 
                     .title {
                         font-family: $ch-family;
@@ -350,6 +519,12 @@ body {
                         letter-spacing: 5px;
                         font-weight: 400;
                         line-height: 1.3;
+
+                        @include breakpoint(medium down) {
+                            font-size: 16px;
+                            margin-bottom: 20px;
+                            text-align: left;
+                        }
                     }
 
                     .content {
@@ -360,12 +535,12 @@ body {
                         line-height: 1.8;
                         text-align: justify;
 
-                        @include breakpoint(large down) {
-                            max-width: 188px;
-                        }
+                        // @include breakpoint(large down) {
+                        //     max-width: 188px;
+                        // }
 
                         @include breakpoint(medium down) {
-                            max-width: 210px;
+                            max-width: 100%;
                             font-size: 12px;
                             letter-spacing: 1px;
                         }
@@ -376,7 +551,11 @@ body {
                         top: -90px;
                         right: -50px;
                         transition: 0.5s all;
-
+                        @include breakpoint(medium down) {
+                            position: absolute;
+                            top: -38px;
+                            right: 0px;
+                        }
                         .item {
                             position: absolute;
                             color: #191f61;
@@ -385,10 +564,20 @@ body {
                             font-weight: 500;
                             top: 14px;
                             left: 16px;
+
+                            @include breakpoint(medium down) {
+                                font-size: 23px;
+                                top: 7px;
+                                left: 7px;
+                            }
                         }
 
                         .bg {
                             transition: 0.5s all;
+
+                            @include breakpoint(medium down) {
+                                width: 40px;
+                            }
                         }
                     }
                 }
@@ -404,13 +593,44 @@ body {
                         .number {
                             transform: scale(1.05);
 
+                            @include breakpoint(medium up) {
+                                transform: scale(1.05);
+                            }
+
                             .bg {
-                                transform: rotate(90deg);
+
+                                @include breakpoint(medium up) {
+                                    transform: rotate(90deg);
+                                }
                             }
                         }
                     }
                 }
             }
+        }
+
+        .serviceSlider {
+            @include breakpoint(medium down) {
+                margin: 0 65px;
+                // border-right: none;
+            }
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            top: 32%;
+
+            &::after {
+                display: none;
+            }
+        }
+
+        .swiper-button-next {
+            right: 25px;
+        }
+
+        .swiper-button-prev {
+            left: 25px;
         }
     }
 
@@ -427,6 +647,9 @@ body {
 
         .title-area {
             margin-bottom: 140px;
+            @include breakpoint(medium down) {
+                margin-bottom: 70px;
+            }
         }
 
         .title {
@@ -437,6 +660,10 @@ body {
             letter-spacing: 1px;
             font-weight: 500;
             text-align: center;
+            @include breakpoint(medium down) {
+                font-size: 30px;
+                margin-bottom: 28px;
+            }
         }
 
         .sub-title {
@@ -445,6 +672,11 @@ body {
             letter-spacing: 8px;
             margin-bottom: 78px;
             text-align: center;
+            @include breakpoint(medium down) {
+                font-size: 15px;
+                margin-bottom: 34px;
+                // margin-bottom: 43px;
+            }
         }
 
         .content {
@@ -452,8 +684,14 @@ body {
             color: #666666;
             letter-spacing: 2px;
             line-height: 1.9;
-            text-align: justify;
+            // text-align: justify;
             text-align: center;
+            @include breakpoint(medium down) {
+                max-width: 225px;
+                margin: 0 auto;
+                letter-spacing: 1px;
+                font-size: 12px;
+            }
         }
 
         .index-marqueeWrap {
@@ -496,8 +734,8 @@ body {
         }
 
         @include breakpoint(medium down) {
-            max-width: 87%;
-            margin: 0 auto 56px;
+            padding: 0 55px;
+            margin: 0 auto 110px;
         }
 
         .title {
@@ -508,6 +746,10 @@ body {
             letter-spacing: 1px;
             font-weight: 500;
             text-align: center;
+            @include breakpoint(medium down) {
+                font-size: 30px;
+                margin-bottom: 28px;
+            }
         }
 
         .sub-title {
@@ -516,6 +758,11 @@ body {
             letter-spacing: 8px;
             margin-bottom: 78px;
             text-align: center;
+            @include breakpoint(medium down) {
+                font-size: 15px;
+                margin-bottom: 34px;
+                // margin-bottom: 43px;
+            }
         }
 
         .doctor-wrap {
@@ -543,6 +790,8 @@ body {
 
                     @include breakpoint(large down) {
                         margin-right: 40px;
+                        margin-top: 0;
+                        text-align: left;
                     }
 
                     @include breakpoint(medium down) {
@@ -562,12 +811,12 @@ body {
                         @include breakpoint(large down) {
                             font-size: 19px;
                             margin-top: 50px;
-                            line-height: 1.5;
+                            line-height: 2;
                             margin-bottom: 70px;
                         }
 
                         @include breakpoint(medium down) {
-                            font-size: 17px;
+                            font-size: 12px;
                             letter-spacing: 3px;
                             margin-top: 0px;
                             margin-bottom: 24px;
@@ -585,11 +834,11 @@ body {
                         }
 
                         @include breakpoint(medium down) {
-                            display: flex;
-                            justify-content: center;
+                            // display: flex;
+                            // justify-content: center;
                             font-size: 12px;
                             // margin-left: 16px;
-                            margin-bottom: 67px;
+                            margin-bottom: 18px;
                         }
 
                         .big {
@@ -603,9 +852,9 @@ body {
 
                             @include breakpoint(medium down) {
                                 vertical-align: sub;
-                                font-size: 22px;
-                                margin-right: 36px;
-                                margin-top: -2px;
+                                font-size: 20px;
+                                // margin-right: 36px;
+                                margin-top: 12px;
                             }
                         }
                     }
@@ -680,15 +929,16 @@ body {
                     }
 
                     @include breakpoint(medium down) {
+                        width: 100%;
                         min-width: auto;
                         // width: 90%;
                         margin: 0 auto 23px;
-                        transform: translateX(-10px);
+                        // transform: translateX(-10px);
                     }
 
-                    @include breakpoint(small down) {
-                        width: 90%;
-                    }
+                    // @include breakpoint(small down) {
+                    //     width: 90%;
+                    // }
 
                 }
 
@@ -706,8 +956,8 @@ body {
                     @include breakpoint(medium down) {
                         width: 100%;
                         // height: 100%;
-                        text-align: center;
-                        font-size: 36px;
+                       
+                        font-size: 26px;
                         // position: absolute;
                         // writing-mode: vertical-rl;
                         // top: 0;
@@ -724,8 +974,8 @@ body {
         margin: 0 auto 96px;
 
         @include breakpoint(medium down) {
-            max-width: 87%;
-            margin: 0 auto 112px;
+           padding: 0 60px;
+           margin-bottom: 60px;
         }
 
         .title-area {
@@ -740,6 +990,10 @@ body {
             letter-spacing: 1px;
             font-weight: 500;
             text-align: center;
+            @include breakpoint(medium down) {
+                font-size: 30px;
+                margin-bottom: 28px;
+            }
         }
 
         .sub-title {
@@ -748,6 +1002,10 @@ body {
             letter-spacing: 8px;
             margin-bottom: 78px;
             text-align: center;
+            @include breakpoint(medium down) {
+                font-size: 15px;
+                margin-bottom: 0px;
+            }
         }
 
         .contact {
@@ -757,7 +1015,7 @@ body {
 
             @include breakpoint(medium down) {
                 flex-direction: column;
-                margin-bottom: 35px;
+                margin-bottom: 25px;
             }
 
             li {
@@ -781,23 +1039,24 @@ body {
                     @include breakpoint(medium down) {
                         position: absolute;
                         content: '';
-                        width: 26px;
+                        width: 188px;
                         height: 1px;
                         background-color: #191f61;
                         // top: auto;
                         bottom: 3px;
-                        left: calc(50% - 13px);
+                        left: calc(50% - 94px);
                     }
                 }
 
-                &:first-child {
+                &:nth-child(2) {
                     .content {
                         @include breakpoint(medium down) {
-                            font-size: 18px;
+                            font-size: 12px;
                         }
                     }
 
                 }
+                
 
                 &:last-child {
                     border-right: none;
@@ -827,7 +1086,8 @@ body {
                     letter-spacing: 3px;
 
                     @include breakpoint(medium down) {
-                        font-size: 20px;
+                        font-size: 18px;
+                        letter-spacing: 2px;
                         margin-bottom: 10px;
                     }
                 }
@@ -882,12 +1142,22 @@ body {
         margin-top: 45px;
         position: static;
 
+        @include breakpoint(medium down) {
+            margin-top: 15px;
+        }
+
         .swiper-pagination-bullet {
             width: 11px;
             height: 11px;
             background-color: #9e9e9f;
             opacity: 1;
             margin: 0 12px;
+
+            @include breakpoint(medium down) {
+                width: 5px;
+                height: 5px;
+                margin: 0 6px;
+            }
 
             &.swiper-pagination-bullet-active {
                 background: linear-gradient(90deg, #83b8e4 0%, #00a2a2 64.2857%, #006e5a 100%);
@@ -899,7 +1169,9 @@ body {
     footer {
 
         padding-bottom: 160px;
-
+        @include breakpoint(medium down) {
+            padding-bottom: 80px;
+        }
         .other-area {
             .icon {
                 text-align: center;
@@ -916,7 +1188,9 @@ body {
                 font-size: 12px;
                 letter-spacing: 1px;
                 text-align: center;
-
+                @include breakpoint(medium down) {
+                    letter-spacing: 0px;
+                }
                 .copyright {
                     color: #645F51;
                     margin-bottom: 8px;

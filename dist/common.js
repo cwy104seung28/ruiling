@@ -122,9 +122,15 @@ $(".marquee").each(function (i, el) {
 });
 
 $(window).on("resize", function () {
-	if ($(this).width() > 1024) {
+	if ($(this).width() > 1025) {
+		if (window.device == 'mobile') {
+			location.reload();
+		}
 		window.device = 'desktop';
 	} else {
+		if (window.device == 'desktop') {
+			location.reload();
+		}
 		window.device = 'mobile';
 	}
 }).trigger("resize");

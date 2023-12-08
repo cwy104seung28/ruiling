@@ -45,13 +45,19 @@ $(".marquee").each(function (i, el) {
 	var ryderMarquee = new RyderMarquee(el, i).create()
 });
 
-$(window).on("resize", function () {
-	if ($(this).width() > 1024) {
+$(window).on("resize", function (){
+	if ($(this).width() > 1025) {
+		if (window.device == 'mobile') {
+			location.reload()
+		}
 		window.device = 'desktop';
-	} else {
+	}else{
+		if (window.device == 'desktop') {
+			location.reload()
+		}
 		window.device = 'mobile';
 	}
-}).trigger("resize");
+}).trigger("resize")
 
 $("[data-r]").each(function (i, el) {
 	if (device == 'mobile' && $(el).data("mobile-r") != undefined) {
