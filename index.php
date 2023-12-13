@@ -331,7 +331,7 @@
                             <div class="big">高興全</div>
                             <img src="./img/sign-mobile.svg" alt="">
                         </div>
-                        <div class="sign show-for-large">
+                        <div class="sign">
                             <img src="./images/sign.png" alt="">
                         </div>
                         <div class="info hide-for-large">

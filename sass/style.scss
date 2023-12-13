@@ -618,7 +618,7 @@ body {
 
         .swiper-button-next,
         .swiper-button-prev {
-            top: 32%;
+            top: 47%;
 
             &::after {
                 display: none;
@@ -787,6 +787,7 @@ body {
                 .article-area {
                     flex: 1 1 0;
                     margin-top: 130px;
+                    position: relative;
 
                     @include breakpoint(large down) {
                         margin-right: 40px;
@@ -864,8 +865,10 @@ body {
                         mix-blend-mode: darken;
 
                         @include breakpoint(large down) {
-                            margin-bottom: 60px;
                             zoom: 0.8;
+                            top: 65px;
+                            right: 0;
+                            position: absolute;
                         }
                     }
 
