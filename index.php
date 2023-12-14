@@ -459,6 +459,7 @@
         var article_swiper = new Swiper(".articleSlider", {
             slidesPerView: 1,
             slidesPerGroup: 1,
+            spaceBetween: 10,
             speed: 1000,
             loop: true,
             pagination: {
@@ -471,7 +472,7 @@
         });
         var service_swiper = new Swiper(".serviceSlider", {
             slidesPerView: 1,
-            slidesPerGroup: 1,
+            spaceBetween: 10,
             speed: 1000,
             loop: true,
             pagination: {

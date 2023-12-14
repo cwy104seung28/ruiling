@@ -8,7 +8,7 @@
 <link rel="apple-touch-icon" sizes="152x152" href="./images/fav.png">
 
 <meta property="og:title" content="瑞齡診所" />
-<meta property="og:image" content="./images/html_share.jpg"></meta>
+<meta property="og:image" content="<?= (isset($_SERVER['HTTPS']) ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'] ?>/images/html_share.jpg"></meta>
 <meta property="og:description" content="瑞齡診所，打造放鬆身心的舒適環境，給您安心專業的體驗。" />
 
 <meta name="description" content="瑞齡診所，打造放鬆身心的舒適環境，給您安心專業的體驗。">
